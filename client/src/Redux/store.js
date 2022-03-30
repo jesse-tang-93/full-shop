@@ -11,11 +11,20 @@ import {
   // productDetailsReducer,
   productListReducer,
 } from './Reducers/ProductReducers'
+import { cartReducer } from "./Reducers/CartReducers";
+import {
+  userDetailsReducer,
+  userLoginReducer,
+  userRegisterReducer,
+  userUpdateProfileReducer,
+} from "./Reducers/userReducers";
 /**
  * combine reducers
  */
 const reducer = combineReducers({
   productList: productListReducer,
+  cart: cartReducer,
+  userLogin: userLoginReducer,
 })
 
 /**
@@ -36,13 +45,13 @@ const shippingAddressFromLocalStorage = localStorage.getItem('shippingAddress')
   : {}
 
 const initialState = {
-  // cart: {
-  //   cartItems: cartItemsFromLocalStorage,
-  //   shippingAddress: shippingAddressFromLocalStorage,
-  // },
-  // userLogin: {
-  //   userInfo: userInfoFromLocalStorage,
-  // },
+  cart: {
+    cartItems: cartItemsFromLocalStorage,
+    shippingAddress: shippingAddressFromLocalStorage,
+  },
+  userLogin: {
+    userInfo: userInfoFromLocalStorage,
+  },
 }
 
 /**
