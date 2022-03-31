@@ -652,3 +652,15 @@ textarea:focus {
   background-color: black;
   border: 1px solid black;
 }
+
+
+.bg-call-to{
+  background: url('https://sasshoes-com.s3.us-west-2.amazonaws.com/img/banner-uplift-21.jpg') 0 0 no-repeat;
+  background-size: cover;
+  padding: 100px 0 100px;
+}
+
+.form-section input[type="submit"]{
+  position: relative;
+  top: -2px;
+}

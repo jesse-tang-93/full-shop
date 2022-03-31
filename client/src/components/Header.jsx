@@ -5,9 +5,11 @@ import { useDispatch, useSelector } from 'react-redux'
 const Header = () => {
   
   const [keyword, setKeyword] = useState("");
+  // useNavigate 使用，实现路由跳转 
   let navigate = useNavigate()
-  const dispatch = useDispatch();
-  let history = useNavigate();
+    // useDispatch
+  // const dispatch = useDispatch();
+  // let history = useNavigate();
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -38,6 +40,7 @@ const Header = () => {
               <p>+255 768 356 890</p>
               <p>info@zpunet.com</p>
             </div>
+            {/* 右侧图标集合 */}
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
               <Link to="">
                 <i className="fab fa-facebook-f"></i>
